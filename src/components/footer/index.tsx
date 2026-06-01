@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "./Container";
+import { Container } from "../container";
 
 const Wrap = styled.footer`
   border-top: 1px solid ${({ theme }) => theme.colors.border};

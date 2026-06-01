@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Menu, X } from "lucide-react";
-import { Container } from "./Container";
+import { Container } from "../container";
 import { Link } from "react-router-dom";
 
 const Bar = styled.header`
@@ -30,6 +30,7 @@ const Brand = styled(Link)`
   span {
     color: ${({ theme }) => theme.colors.primary};
   }
+  font-family: "Inter", sans-serif;
 `;
 
 const Nav = styled.nav<{ $open: boolean }>`
@@ -71,9 +72,10 @@ const Toggle = styled.button`
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/sobre", label: "Sobre" },
+  { to: "/about", label: "Sobre" },
   { to: "/skills", label: "Skills" },
-  { to: "/contact", label: "Contact" },
+  { to: "/projects", label: "Projetos" },
+  { to: "/contact", label: "Contato" },
 ] as const;
 
 export function Header() {
@@ -84,7 +86,7 @@ export function Header() {
       <Container>
         <Inner>
           <Brand to="/" onClick={() => setOpen(false)}>
-            G<span>R</span>
+            G<span>R</span>M
           </Brand>
           <Nav $open={open}>
             {links.map((l) => (
