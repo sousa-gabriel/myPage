@@ -1,9 +1,6 @@
-function App() {
-  return (
-    <>
-      <h1>Get started</h1>
-    </>
-  );
-}
+import React from "react";
+import { Routes } from "./routes";
 
-export default App;
+export function App() {
+  return <Routes />;
+}
